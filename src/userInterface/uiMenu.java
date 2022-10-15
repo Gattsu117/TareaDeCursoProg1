@@ -2,7 +2,8 @@ package userInterface;
 
 public interface uiMenu {
 		
-	public void mostar2();
-	public void save2();
+	void mostarOpt();
+	void mostar();
+	 void mostarOptSelected(int opt);
 	
 }

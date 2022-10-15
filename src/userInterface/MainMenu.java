@@ -1,14 +1,15 @@
 package userInterface;
 import java.util.Scanner;
+import userInterface.uiMenu;
 
 
-public class MainMenu {
+public class MainMenu implements uiMenu {
 
 	Scanner scan = new Scanner(System.in);
-	public void mostar() {
-		mostarOpt();
-	}
 	
+	
+	
+	@Override
 	public void mostarOpt() {
 		int opt = 0;
 		System.out.println("1.Ingresar los datos del trabajador");
@@ -24,8 +25,16 @@ public class MainMenu {
         	 opt= scan.nextInt();
         }
         mostarOptSelected(opt);
+		
 	}
-	
+
+	@Override
+	public void mostar() {
+		mostarOpt();
+		
+	}
+
+	@Override
 	public void mostarOptSelected(int opt) {
 		while(opt!=3) {
 			switch(opt) {
@@ -49,38 +58,7 @@ public class MainMenu {
             	break;
             }
 		}
-	}
-	public void menu() {
-		 int opcion=0;
-	        System.out.println("\nBienvenido");
-	        while(opcion!=3){
-	            System.out.println("1.Ingresar los datos del trabajador");
-	            System.out.println("2.Realizar calculos de nomina");
-	            System.out.println("3.Salir");
-	            System.out.println("Opcion: ");
-	            opcion = scan.nextInt();
-	            
-	            switch(opcion) {
-	            
-	            case 1:
-	            	MenuNomina n = new MenuNomina();
-	            	n.MenuNomina();
-	            	break;
-	            case 2:
-	            	MenuNomina no = new MenuNomina();
-	            	no.mostrar();
-	            	break;
-	            case 3:
-	            	System.out.println("Gracias por usar el programa");
-	            	System.exit(0);
-	        
-	            break;
-	            
-	            default:
-	            	System.err.println("Seleccione una opcion correcta\n");
-	            	break;
-	            }
-	        }
+		
 	}
 	
 }

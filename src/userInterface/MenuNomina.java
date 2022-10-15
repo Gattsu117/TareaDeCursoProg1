@@ -65,7 +65,7 @@ public class MenuNomina {
 		       }
 		       
 		       
-		        System.out.println("3.Ingrese A�os laborados del trabajador: ");
+		        System.out.println("3.Ingrese Años laborados del trabajador: ");
 		        d.setAniosLaborados(scan.nextInt());
 		        System.out.println("4.Ingrese bonos de transporte: ");
 		        d.setZonaje(scan.nextDouble());
