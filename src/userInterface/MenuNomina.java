@@ -20,13 +20,19 @@ public class MenuNomina {
 		System.out.println("Que desea hacer?");
 		System.out.println("1. Agregar  empleado");
 		System.out.println("2. Guardar Empleados");
+		System.out.println("3. volver");
+		
 	}
 	
 	
 	public short validar() {
 		short option = scan.nextShort();
 		
-		while(option <1 || option >2) {
+		while(option <1 || option >=3) {
+			if(option ==3) {
+				MainMenu mm = new MainMenu();
+				mm.mostar();
+			}
 			System.err.println("Seleccione una opcion correcta\n");
 			opc();
 			option = scan.nextShort();

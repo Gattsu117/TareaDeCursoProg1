@@ -36,12 +36,12 @@ public class NominaFile extends Data {
 	}
 	
 	
-	public List<Data> read(File file){			//Este metodo permitira leer la informacion que se guarde en el metodo anterior, para eso utilizamos la clase InputStream		
+	public List<Data> read(File file){			
 		List<Data>data= null;
 		try {
-			ObjectInputStream r = new ObjectInputStream(new FileInputStream(file)); // para la lectura tenemos la clase ObjectInputStream, que leera la informacion dentro del fichero
+			ObjectInputStream r = new ObjectInputStream(new FileInputStream(file));
 			try {
-				data = (List<Data>) r.readObject();	// aca precisamente es donde hara la lectura de la lista creada con anterioridad, donde esta la informacion de la nomina
+				data = (List<Data>) r.readObject();	
 				r.close();		// aca cerramos el procedimiento de lectura, que es necesario
 			} catch (ClassNotFoundException e) {
 				// TODO Auto-generated catch block

@@ -30,6 +30,7 @@ public class MainMenu implements uiMenu {
 
 	@Override
 	public void mostar() {
+	
 		mostarOpt();
 		
 	}
